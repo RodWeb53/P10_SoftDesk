@@ -3,7 +3,7 @@ from django.db import models
 
 
 class MyUserManager(BaseUserManager):
-    def create_user(self, email, first_name, last_name, password=None, **Kwargs):
+    def create_user(self, email, first_name, last_name, password=None):
         if not email:
             raise ValueError("Vous devez entrer un email")
         if not first_name:
@@ -14,7 +14,7 @@ class MyUserManager(BaseUserManager):
             email=self.normalize_email(email),
             first_name=first_name,
             last_name=last_name,
-            )
+        )
         user.set_password(password)
         user.save()
         return user
@@ -33,6 +33,7 @@ class MyUserManager(BaseUserManager):
 
 class User(AbstractUser):
     username = None
+    user_id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=128)
     last_name = models.CharField(max_length=128)
     email = models.EmailField(unique=True, max_length=255, blank=False)
@@ -41,6 +42,7 @@ class User(AbstractUser):
     is_admin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
     objects = MyUserManager()
 
     def has_perm(slf, perm, obj=None):
