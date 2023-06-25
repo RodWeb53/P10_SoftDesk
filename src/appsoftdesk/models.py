@@ -12,7 +12,7 @@ class Projects(models.Model):
     title = models.CharField(max_length=255, blank=False)
     description = models.CharField(max_length=255)
     type = models.CharField(max_length=70, choices=TYPE_CHOICES.choices)
-    author_user_id = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+    author_user = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
 
 
 class Contributors(models.Model):
@@ -21,12 +21,12 @@ class Contributors(models.Model):
         CONTRIB = "Contributor"
 
     author_user = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
-    project_id = models.ForeignKey(to=Projects, on_delete=models.PROTECT)
+    project = models.ForeignKey(to=Projects, on_delete=models.PROTECT)
     permission = models.CharField(max_length=70, choices=PERMISSION_CHOICES.choices)
     role = models.CharField(max_length=255)
 
     class Meta:
-        unique_together = ['user', 'project', ]
+        unique_together = ['author_user', 'project', ]
 
 
 class Issues(models.Model):
@@ -55,12 +55,12 @@ class Issues(models.Model):
         related_name="issues_project"
     )
     status = models.CharField(max_length=70, choices=STATUS_CHOICES.choices)
-    author_user_id = models.ForeignKey(
+    author_user = models.ForeignKey(
         to=settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT,
         related_name="issue_author"
     )
-    assignee_user_id = models.ForeignKey(
+    assignee_user = models.ForeignKey(
         to=settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT,
         related_name="issue_assignee"
@@ -71,12 +71,12 @@ class Issues(models.Model):
 class Comments(models.Model):
 
     description = models.CharField(max_length=255)
-    author_user_id = models.ForeignKey(
+    author_user = models.ForeignKey(
         to=settings.AUTH_USER_MODEL,
         on_delete=models.PROTECT,
         related_name="comments_issue"
     )
-    issue_id = models.ForeignKey(
+    issue = models.ForeignKey(
         to=Issues,
         on_delete=models.PROTECT,
         related_name="comments_issue"
