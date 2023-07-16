@@ -21,7 +21,7 @@ class Contributors(models.Model):
         CONTRIB = "Contributor"
 
     author_user = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name="contributors")
-    project = models.ForeignKey(to=Projects, on_delete=models.PROTECT, related_name="contributors")
+    project = models.ForeignKey(to=Projects, on_delete=models.CASCADE, related_name="contributors")
     permission = models.CharField(max_length=70, choices=PERMISSION_CHOICES.choices)
     role = models.CharField(max_length=255)
 
