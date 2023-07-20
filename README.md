@@ -42,6 +42,8 @@ Aller dans un terminal et tapez les commandes suivantes :
 
     cd src
 
+Ensuite 
+
     python manage.py runserver
 
 ### 5. Adresse de l'API
@@ -79,29 +81,31 @@ L'adresse de l'API est :
 
 ## Listes des utilisateurs dans la base de données
      
-     ______________________________________________
-    | *Identifiant*            |   *Mot de passe*  |
-    |--------------------------|-------------------|
-    | CreateurProjet@mail.com  |     Test2023*     |
-    | Contributeur@mail.com    |     Test2023*     |
-    | Contributeur2@mail.com   |     Test2023*     |
-    | visiteur@mail.com        |     Test2023*     |
-    |__________________________|___________________|
+ ----------------------------------------------
+| *Identifiant*            |   *Mot de passe*  |
+|--------------------------|-------------------|
+| CreateurProjet@mail.com  |     Test2023*     |
+| Contributeur@mail.com    |     Test2023*     |
+| Contributeur2@mail.com   |     Test2023*     |
+| visiteur@mail.com        |     Test2023*     |
+ ----------------------------------------------
 
 
 ## Documentation Postman
 
 Lien pour la documentaion publiée :
-https://documenter.getpostman.com/view/26418588/2s946feCoq
+
+    https://documenter.getpostman.com/view/26418588/2s946feCoq
+
 
 
 ## Générer un rapport avec flake8-html
 
 Le rapport flake8 créer un rapport montrant que le code ne contient pas d'érreur de peluchage
 
-    Le rapport sera créer à l'aide du fichier setup.cfg
-    le fichier de configuration permet de ne pas prendre en analyse l'environnement virtuel
-    Limite la longueur des lignes à 119
-    Et paramètre le répertoire de sortie
+Le rapport sera créer à l'aide du fichier setup.cfg
+le fichier de configuration permet de ne pas prendre en analyse l'environnement virtuel
+Limite la longueur des lignes à 119
+Et paramètre le répertoire de sortie
 
-    Taper la commande "flake8" a la racine du projet
+Taper la commande "flake8" a la racine du projet
