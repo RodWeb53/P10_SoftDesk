@@ -15,7 +15,7 @@ Cette solution s’adresse à des entreprises clientes, en B2B.
 La prévention des vulnérabilités suivant les recommandations de l'OWASP qui ont été prisent en compte selon le processus AAA (Authentication, Authorization, Accounting) (authentification, autorisation, traçabilité) des protocoles réseau.
 
 - Authentification : utilisation de JWT (JSON Web Token) pour le back-end d'authentification du framework Django REST.
-- Autorisation : L'accès à l'API n'est autorisée qu'a un utilisateur connecté.
+- Autorisation : L'accès à l'API n'est autorisé qu'a un utilisateur connecté.
 - Traçabilité : Les droits d'accès en modification ou suppression ont des contraintes en fonction du statut de l'utilisateur connecté.
 
 
@@ -44,7 +44,7 @@ Sous MAC ou Linux tapez la commande suivante :
 
     source env/bin/activate
 
-### 3. Intallation des dépendance
+### 3. Intallation des dépendances
 
 Tapez la commande suivante :
 
@@ -107,7 +107,7 @@ L'adresse de l'API est :
 
 ## Documentation Postman
 
-Lien pour la documentaion publiée :
+Lien pour la documentation publiée :
 
     https://documenter.getpostman.com/view/26418588/2s946feCoq
 
@@ -117,9 +117,9 @@ Lien pour la documentaion publiée :
 
 Le rapport flake8 créer un rapport montrant que le code ne contient pas d'érreur de peluchage
 
-Le rapport sera créer à l'aide du fichier setup.cfg
-le fichier de configuration permet de ne pas prendre en analyse l'environnement virtuel
-Limite la longueur des lignes à 119
-Et paramètre le répertoire de sortie
+- Le rapport sera créer à l'aide du fichier setup.cfg.
+- Le fichier de configuration permet de ne pas prendre en analyse l'environnement virtuel.
+- Limite la longueur des lignes à 119.
+- Et paramètre le répertoire de sortie.
 
 Taper la commande "flake8" a la racine du projet
