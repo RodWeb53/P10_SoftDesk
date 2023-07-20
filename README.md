@@ -14,9 +14,9 @@ Cette solution s’adresse à des entreprises clientes, en B2B.
 
 La prévention des vulnérabilités suivant les recommandations de l'OWASP qui ont été prisent en compte selon le processus AAA (Authentication, Authorization, Accounting) (authentification, autorisation, traçabilité) des protocoles réseau.
 
-    -   Authentification : utilisation de JWT (JSON Web Token) pour le back-end d'authentification du framework Django REST.
-    -   Autorisation : L'accès à l'API n'est autorisée qu'a un utilisateur connecté.
-    -   Traçabilité : Les droits d'accès en modification ou suppression ont des contraintes en fonction du statut de l'utilisateur connecté.
+- Authentification : utilisation de JWT (JSON Web Token) pour le back-end d'authentification du framework Django REST.
+- Autorisation : L'accès à l'API n'est autorisée qu'a un utilisateur connecté.
+- Traçabilité : Les droits d'accès en modification ou suppression ont des contraintes en fonction du statut de l'utilisateur connecté.
 
 
 ## Mise en place du programme
