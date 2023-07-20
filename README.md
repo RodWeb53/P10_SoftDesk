@@ -5,6 +5,20 @@
 
 ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg) (https://forthebadge.com)
 
+## Descriptif de l'application
+
+SoftDesk, une société d'édition de logiciels de développement et de collaboration, a décidé de publier une application permettant de remonter et suivre des problèmes techniques (issue tracking system).
+Cette solution s’adresse à des entreprises clientes, en B2B.
+
+## Sécurisation
+
+La prévention des vulnérabilités suivant les recommandations de l'OWASP qui ont été prisent en compte selon le processus AAA (Authentication, Authorization, Accounting) (authentification, autorisation, traçabilité) des protocoles réseau.
+
+    -   Authentification : utilisation de JWT (JSON Web Token) pour le back-end d'authentification du framework Django REST.
+    -   Autorisation : L'accès à l'API n'est autorisée qu'a un utilisateur connecté.
+    -   Traçabilité : Les droits d'accès en modification ou suppression ont des contraintes en fonction du statut de l'utilisateur connecté.
+
+
 ## Mise en place du programme
 
 `Pré-requis : python 3 doit être installé sur votre machine`
