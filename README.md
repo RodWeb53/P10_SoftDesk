@@ -1,3 +1,5 @@
+https://forthebadge.com/generator/?plabel=Made+with&slabel=PYTHON+%2B+DJANGO+%2B+DJANGO+REST+FRAMEWORK
+
 Initialisation du projet
 
 
