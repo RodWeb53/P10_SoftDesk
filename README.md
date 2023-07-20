@@ -68,7 +68,6 @@ L'adresse de l'API est :
 
 ### 6. Endpoints
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------
 | Description                                                                                 | Méthode | Endpoint                                       |
 | ------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------- |
 | Inscription de l'utilisateur                                                                | POST    | `/api/signup/`                                 |
@@ -90,19 +89,16 @@ L'adresse de l'API est :
 | Modifier un commentaire                                                                     | PUT     | `/api/projects/{id}/issues/{id}/comments/{id}` |
 | Supprimer un commentaire                                                                    | DELETE  | `/api/projects/{id}/issues/{id}/comments/{id}` |
 | Récupérer un commentaire (comment) via son id                                               | GET     | `/api/projects/{id}/issues/{id}/comments/{id}` |
-  ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Listes des utilisateurs dans la base de données
-     
- ----------------------------------------------
+
 | *Identifiant*            |   *Mot de passe*  |
 |--------------------------|-------------------|
 | CreateurProjet@mail.com  |     Test2023*     |
 | Contributeur@mail.com    |     Test2023*     |
 | Contributeur2@mail.com   |     Test2023*     |
 | visiteur@mail.com        |     Test2023*     |
- ----------------------------------------------
 
 
 ## Documentation Postman
