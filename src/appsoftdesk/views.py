@@ -10,7 +10,8 @@ from .serializers import ProjectsListSerializer, \
     IssuesSerializer, \
     CommentsSerializer
 
-from .permissions import ContributorReadOnly, FullAccess, ContributorProjectReadOnly
+from .permissions import ContributorReadOnly, FullAccess, ContributorProjectReadOnly, \
+    AuthorDeleteContributor
 
 
 class ProjectsViewset(ModelViewSet):
@@ -60,8 +61,10 @@ class ContributorsViewset(ModelViewSet):
         serializer.save(project=project)
 
     def get_permissions(self):
-        if self.request.method in ['PATCH', 'PUT', 'DELETE']:
+        if self.request.method in ['PATCH', 'PUT']:
             return [FullAccess()]
+        elif self.request.method in ['DELETE']:
+            return [AuthorDeleteContributor()]
         return [ContributorProjectReadOnly()]
 
 

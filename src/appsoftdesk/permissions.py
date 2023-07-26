@@ -54,3 +54,19 @@ class ContributorProjectReadOnly(BasePermission):
         if request.method in SAFE_METHODS:
             return True
         return False
+
+
+class AuthorDeleteContributor(BasePermission):
+
+    def has_permission(self, request, view):
+        if request.user.is_authenticated:
+            return True
+        return False
+
+    def has_object_permission(self, request, view, obj):
+
+        current_project = Projects.objects.filter(Q(id=int(view.kwargs["project_pk"]), author_user=request.user))
+
+        if current_project:
+            return True
+        return False

@@ -21,7 +21,7 @@ La prévention des vulnérabilités suivant les recommandations de l'OWASP qui o
 
 ## Mise en place du programme
 
-`Pré-requis : python 3 doit être installé sur votre machine`
+`Pré-requis : python 3.9.13 minimum doit être installé sur votre machine`
 
 - Télécharger ce code dans ''code'' > ''Download ZIP''
 - Décompresser le dossier

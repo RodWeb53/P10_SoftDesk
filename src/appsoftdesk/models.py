@@ -14,6 +14,9 @@ class Projects(models.Model):
     type = models.CharField(max_length=70, choices=TYPE_CHOICES.choices)
     author_user = models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return self.title
+
 
 class Contributors(models.Model):
     class PERMISSION_CHOICES(models.TextChoices):
@@ -27,6 +30,9 @@ class Contributors(models.Model):
 
     class Meta:
         unique_together = ['author_user', 'project', ]
+
+    def __str__(self):
+        return self.author_user.email
 
 
 class Issues(models.Model):
@@ -67,6 +73,9 @@ class Issues(models.Model):
     )
     created_time = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.title
+
 
 class Comments(models.Model):
 
@@ -82,3 +91,6 @@ class Comments(models.Model):
         related_name="comments"
     )
     created_time = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
